@@ -331,7 +331,12 @@ $("copyAddr").addEventListener("click",()=>{
 });
 
 // pricelist
-const cats = DATA.pricelist;
+// Urutan bubble kategori di Daftar Harga (ubah urutan di sini)
+const URUTAN = ["Wisuda","Keluarga","Grup","Personal","Couple","Prewedding","Engagement","Maternity","Pas Foto","Pas Foto Couple"];
+// Nama yang tampil di bubble (kalau beda dari id kategori)
+const LABEL = {"Grup":"Group"};
+const urut = id => { const i = URUTAN.indexOf(id); return i < 0 ? 999 : i; };
+const cats = DATA.pricelist.slice().sort((a,b)=>urut(a.id)-urut(b.id));
 function li(t){const e=document.createElement("li");e.textContent=t;return e}
 function show(id){
   const c = cats.find(x=>x.id===id);
@@ -406,7 +411,7 @@ function show(id){
   }
 }
 cats.forEach(c=>{
-  const b=document.createElement("button"); b.className="tab"; b.setAttribute("role","tab"); b.dataset.cat=c.id; b.textContent=c.id;
+  const b=document.createElement("button"); b.className="tab"; b.setAttribute("role","tab"); b.dataset.cat=c.id; b.textContent=LABEL[c.id]||c.id;
   b.addEventListener("click",()=>show(c.id)); $("tabs").append(b);
 });
 show(cats[0].id);
