@@ -331,7 +331,10 @@ $("copyAddr").addEventListener("click",()=>{
 });
 
 // pricelist
-const cats = DATA.pricelist;
+// Urutan kategori di Daftar Harga (ubah urutan di sini)
+const URUTAN = ["Wisuda","Keluarga","Grup","Personal","Couple","Prewedding","Engagement","Maternity","Pas Foto","Pas Foto Couple"];
+const urut = id => { const i = URUTAN.indexOf(id); return i < 0 ? 999 : i; };
+const cats = DATA.pricelist.slice().sort((a,b)=>urut(a.id)-urut(b.id));
 function li(t){const e=document.createElement("li");e.textContent=t;return e}
 function show(id){
   const c = cats.find(x=>x.id===id);
