@@ -177,6 +177,19 @@ footer{text-align:center;font-size:.75rem;color:rgba(14,46,84,.75);font-family:v
 .rise{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
 @keyframes rise{from{transform:translateY(10px)}to{transform:none}}
 @media (prefers-reduced-motion:reduce){.btn,.chev{transition:none}.btn:hover{transform:none}.rec.on i,.rise{animation:none}}
+
+/* Warna tombol Pricelist (biru) & Lokasi (merah) */
+#priceBtn{background:linear-gradient(135deg,#1d3bc0,#2f56f0);border-color:transparent;color:#fff}
+#priceBtn:hover{background:linear-gradient(135deg,#2346d8,#4067ff);border-color:transparent}
+#mapBtn{background:linear-gradient(135deg,#b81d31,#e2384e);border-color:transparent;color:#fff}
+#mapBtn:hover{background:linear-gradient(135deg,#c9223a,#ef4a5f);border-color:transparent}
+#priceBtn .ico,#mapBtn .ico{background:rgba(255,255,255,.2);color:#fff}
+#priceBtn small,#mapBtn small{color:rgba(255,255,255,.82)}
+#priceBtn .chev,#mapBtn .chev{color:rgba(255,255,255,.85)}
+#priceBtn[aria-expanded="true"],#mapBtn[aria-expanded="true"]{border-color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.5)}
+#priceBtn[aria-expanded="true"] .chev,#mapBtn[aria-expanded="true"] .chev{color:#fff}
+#pricePanel{border-top:4px solid #2346d8}
+#mapPanel{border-top:4px solid #d7263d}
 </style>
 
 <div class="bgdeco" aria-hidden="true">
