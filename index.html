@@ -190,6 +190,25 @@ footer{text-align:center;font-size:.75rem;color:rgba(14,46,84,.75);font-family:v
 #priceBtn[aria-expanded="true"] .chev,#mapBtn[aria-expanded="true"] .chev{color:#fff}
 #pricePanel{border-top:4px solid #2346d8}
 #mapPanel{border-top:4px solid #d7263d}
+
+/* Tombol "Pesan paket ini" */
+.frame .order{position:relative;overflow:hidden;grid-column:1/-1;justify-self:stretch;display:flex;align-items:center;gap:10px;
+  margin-top:10px;padding:12px 14px 12px 12px;border:0;border-radius:12px;
+  background:linear-gradient(135deg,#1fae5b,#25c366);color:#fff;font:inherit;font-size:.92rem;font-weight:800;letter-spacing:.01em;
+  text-decoration:none;box-shadow:0 8px 18px -10px rgba(31,174,91,.9),inset 0 1px 0 rgba(255,255,255,.25);
+  transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
+.frame .order .oi{flex:none;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:rgba(255,255,255,.22)}
+.frame .order .oi svg{width:18px;height:18px}
+.frame .order .ot{flex:1}
+.frame .order .oa{flex:none;width:20px;height:20px;transition:transform .2s ease}
+.frame .order::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg);pointer-events:none}
+.frame .order:hover{transform:translateY(-2px);filter:brightness(1.05);box-shadow:0 12px 22px -10px rgba(31,174,91,.95),inset 0 1px 0 rgba(255,255,255,.25)}
+.frame .order:hover .oa{transform:translateX(4px)}
+.frame .order:active{transform:translateY(0) scale(.98)}
+@media (prefers-reduced-motion:no-preference){.frame .order::after{animation:shine 3.2s ease-in-out infinite}}
+@keyframes shine{0%,60%{left:-60%}100%{left:130%}}
+@media (prefers-reduced-motion:reduce){.frame .order,.frame .order .oa{transition:none}.frame .order:hover{transform:none}}
 </style>
 
 <div class="bgdeco" aria-hidden="true">
@@ -344,7 +363,8 @@ function show(id){
     if(p.max){const m=document.createElement("span"); m.className="max"; m.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.2c2.8.3 5 2.6 5 5.8"/></svg>'; m.append((p.max==1?"1 orang":"Maks. "+p.max+" orang")); f.querySelector(".isi").before(m);}
     p.isi.forEach(x=>f.querySelector(".isi").append(li(x)));
     const o=f.querySelector(".order");
-    o.textContent = c.layout ? "Pilih layout ini →" : "Pesan paket ini →";
+    o.innerHTML = '<span class="oi"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg></span><span class="ot"></span><svg class="oa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+    o.querySelector(".ot").textContent = c.layout ? "Pilih layout ini" : "Pesan paket ini";
     const qty={};
     let totalEl=null;
     if(c.addons && p.harga){
