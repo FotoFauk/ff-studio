@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html data-theme="sage"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>FF Studio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -209,7 +209,107 @@ footer{text-align:center;font-size:.75rem;color:rgba(14,46,84,.75);font-family:v
 @media (prefers-reduced-motion:no-preference){.frame .order::after{animation:shine 3.2s ease-in-out infinite}}
 @keyframes shine{0%,60%{left:-60%}100%{left:130%}}
 @media (prefers-reduced-motion:reduce){.frame .order,.frame .order .oa{transition:none}.frame .order:hover{transform:none}}
+/* ===== Tema Sage (hijau lembut) ===== */
+html[data-theme=sage]{--bg:#f1f6ee;--page:#d6e3d1;--surface:#fbfdf9;--surface2:#eef4eb;--line:#cfdcc9;--ink:#24342a;--muted:#5e6e60;--safelight:#3f7a5a;--amber:#a07a3a;--wa:#3f7a5a;color-scheme:light}
+html[data-theme=sage] body{background:linear-gradient(180deg,#b9cdb4 0%,#d6e3d1 45%,#edf3ea 100%) fixed,#d6e3d1}
+html[data-theme=sage] .hero{--bg:#1c3326;--surface:#3a6650;--surface2:#2f5a45;--line:#4a7660;--ink:#fff;--muted:#d3e2d6;--safelight:#e7f0c9}
+html[data-theme=sage] .s1{background:radial-gradient(circle,rgba(255,255,255,.7),transparent 60%)}
+html[data-theme=sage] .s2{background:radial-gradient(circle,rgba(255,244,214,.35),transparent 62%)}
+html[data-theme=sage] .sweep{background:linear-gradient(#d3e0cf,#c3d5be);box-shadow:0 -30px 60px -20px rgba(255,255,255,.75) inset}
+html[data-theme=sage] .band{-webkit-text-stroke:1.5px rgba(255,255,255,.7)}
+html[data-theme=sage] .yellow{background:#e7f0c9}html[data-theme=sage] .red{background:#9fbfa1}html[data-theme=sage] .blue{background:#fff}html[data-theme=sage] .white{background:#f4f7f2}
+html[data-theme=sage] .print svg *{fill:rgba(36,52,42,.8)}html[data-theme=sage] .yellow svg *{fill:rgba(36,52,42,.8)}html[data-theme=sage] .red svg *{fill:rgba(36,52,42,.8)}
+html[data-theme=sage] .pattern{opacity:.05}html[data-theme=sage] .grain{opacity:.12}
+html[data-theme=sage] .btn.wa,html[data-theme=sage] .btn.wa:hover{background:#fbfdf9;color:#24342a;border-color:#cfdcc9}
+html[data-theme=sage] .btn.wa .ico{background:#3f7a5a;color:#fff}
+html[data-theme=sage] .btn.wa small{color:#5e6e60}
+html[data-theme=sage] #priceBtn,html[data-theme=sage] #priceBtn:hover{background:linear-gradient(135deg,#4f8a69,#6aa383);color:#fff;border-color:transparent}
+html[data-theme=sage] #priceBtn .ico{background:rgba(255,255,255,.22);color:#fff}
+html[data-theme=sage] #priceBtn small,html[data-theme=sage] #priceBtn .chev{color:rgba(255,255,255,.85)}
+html[data-theme=sage] #mapBtn,html[data-theme=sage] #mapBtn:hover{background:linear-gradient(135deg,#24342a,#34503f);color:#fff;border-color:transparent}
+html[data-theme=sage] #mapBtn .ico{background:rgba(255,255,255,.15);color:#e7f0c9}
+html[data-theme=sage] #mapBtn small,html[data-theme=sage] #mapBtn .chev{color:rgba(255,255,255,.8)}
+html[data-theme=sage] .btn:hover{border-color:#3f7a5a}
+html[data-theme=sage] #priceBtn[aria-expanded="true"],html[data-theme=sage] #mapBtn[aria-expanded="true"]{border-color:#3f7a5a;box-shadow:0 0 0 2px #3f7a5a55}
+html[data-theme=sage] #priceBtn[aria-expanded="true"] .chev,html[data-theme=sage] #mapBtn[aria-expanded="true"] .chev{color:inherit}
+html[data-theme=sage] #pricePanel{border-top:3px solid #4f8a69}html[data-theme=sage] #mapPanel{border-top:3px solid #24342a}
+html[data-theme=sage] .frame .order,html[data-theme=sage] .frame .order:hover{background:linear-gradient(135deg,#3f7a5a,#4f8a69);color:#fff;box-shadow:0 8px 18px -10px rgba(63,122,90,.8)}
+html[data-theme=sage] .frame .order .oi{background:rgba(255,255,255,.18)}
+html[data-theme=sage] .tab[aria-selected="true"]{background:#24342a;color:#fff;border-color:#24342a}
+html[data-theme=sage] .tag{background:#24342a;color:#fff}
+html[data-theme=sage] .max{background:transparent;border-color:var(--line)}
+html[data-theme=sage] .extra{border-color:var(--line);background:var(--surface2)}
+html[data-theme=sage] .banner .eyebrow{color:#e7f0c9}
+html[data-theme=sage] footer{color:#4f5e50}
+
 </style>
+
+<style>
+/* Animasi loading paket */
+.sheet .sk{list-style:none;border-radius:12px;border:1px solid var(--line);
+  background:linear-gradient(90deg,var(--surface2) 25%,var(--line) 37%,var(--surface2) 63%);background-size:400% 100%;animation:shim 1.1s ease infinite}
+.sheet .sk.ban{aspect-ratio:16/9;border-radius:14px}
+.sheet .sk.fr{height:130px}
+@keyframes shim{0%{background-position:100% 50%}100%{background-position:0 50%}}
+.sheet .reveal{animation:revealUp .6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes revealUp{from{opacity:0;transform:translateY(16px) scale(.98)}}
+.banner.reveal img{animation:kenburns 1.4s ease-out both}
+@keyframes kenburns{from{transform:scale(1.14)}}
+/* Animasi harga bertambah */
+.total{position:relative}
+.total strong{display:inline-block;transition:color .3s}
+.total strong.bump{animation:bump .45s cubic-bezier(.3,1.6,.5,1)}
+.total strong.up{color:#1fae5b}.total strong.down{color:var(--amber)}
+@keyframes bump{35%{transform:scale(1.18)}}
+.total .delta{position:absolute;right:0;top:-8px;font-family:var(--mono);font-size:.78rem;font-weight:700;color:#1fae5b;pointer-events:none;animation:floatUp 1s ease-out forwards}
+.total .delta.down{color:var(--amber)}
+@keyframes floatUp{0%{opacity:0;transform:translateY(8px)}20%{opacity:1}100%{opacity:0;transform:translateY(-22px)}}
+.step output.bump{animation:bump .35s cubic-bezier(.3,1.6,.5,1)}
+@media (prefers-reduced-motion:reduce){.sheet .sk,.sheet .reveal,.banner.reveal img,.total strong.bump,.total .delta,.step output.bump{animation:none}}
+</style>
+<script>
+const calmMQ = matchMedia("(prefers-reduced-motion: reduce)");
+// hitung naik harga saat paket dimuat
+function countUp(root){
+  if(calmMQ.matches) return;
+  root.querySelectorAll(".price, .from, .ratecard td:last-child, .total strong").forEach(el=>{
+    const txt=el.textContent, m=txt.match(/Rp([\d.]+)/); if(!m) return;
+    const n=parseInt(m[1].replace(/\./g,""),10), pre=txt.slice(0,m.index), post=txt.slice(m.index+m[0].length), t0=performance.now();
+    let done=false; setTimeout(()=>{ done=true; el.textContent=txt; },1050);
+    (function step(t){ if(done) return; const k=Math.min(1,(t-t0)/900), v=Math.round(n*(1-Math.pow(1-k,3))/1000)*1000;
+      el.textContent = k<1 ? pre+"Rp"+v.toLocaleString("id-ID")+post : txt; if(k<1) requestAnimationFrame(step); })(t0);
+  });
+}
+// total berubah: angka berjalan + memantul + label +Rp melayang
+function animTotal(el,total){
+  const fmt=n=>"Rp"+n.toLocaleString("id-ID");
+  let s=el.querySelector("strong");
+  if(!s || el._v===undefined){ el.innerHTML=`<span>Total</span><strong>${fmt(total)}</strong>`; el._v=total; return; }
+  const from=el._v; el._v=total; if(from===total) return;
+  if(calmMQ.matches){ s.textContent=fmt(total); return; }
+  const up=total>from, d=document.createElement("span");
+  d.className="delta"+(up?"":" down"); d.textContent=(up?"+":"−")+fmt(Math.abs(total-from)); el.append(d); setTimeout(()=>d.remove(),1000);
+  s.classList.remove("bump","up","down"); void s.offsetWidth; s.classList.add("bump",up?"up":"down");
+  clearTimeout(s._t); s._t=setTimeout(()=>s.classList.remove("up","down"),700);
+  const t0=performance.now(); cancelAnimationFrame(s._r); clearTimeout(s._f);
+  s._f=setTimeout(()=>{ cancelAnimationFrame(s._r); s.textContent=fmt(total); },650);
+  (function step(t){ const k=Math.min(1,(t-t0)/500), v=Math.round((from+(total-from)*(1-Math.pow(1-k,3)))/1000)*1000;
+    s.textContent=fmt(k<1?v:total); if(k<1) s._r=requestAnimationFrame(step); })(t0);
+}
+// loading paket: kerangka berkilau dulu, lalu kartu muncul bergantian
+let loadTok=0;
+function loadPaket(id){
+  const box=document.getElementById("items");
+  id = id || (document.querySelector('#tabs [aria-selected="true"]')||{}).dataset?.cat;
+  if(calmMQ.matches){ show(id); return; }
+  const tok=++loadTok;
+  [...document.getElementById("tabs").children].forEach(t=>t.setAttribute("aria-selected", t.dataset.cat===id));
+  box.innerHTML='<li class="sk ban"></li><li class="sk fr"></li><li class="sk fr"></li>';
+  setTimeout(()=>{ if(tok!==loadTok) return; show(id);
+    [...box.children].forEach((el,i)=>{ el.classList.add("reveal"); el.style.animationDelay=(i*90)+"ms"; });
+    countUp(box); },450);
+}
+</script>
 
 <div class="bgdeco" aria-hidden="true">
   <div class="spot s1"></div><div class="spot s2"></div>
@@ -320,7 +420,7 @@ tick(); setInterval(tick, 30000);
 [["priceBtn","pricePanel"],["mapBtn","mapPanel"]].forEach(([b,p])=>{
   $(b).addEventListener("click",()=>{
     const on = $(b).getAttribute("aria-expanded")!=="true";
-    $(b).setAttribute("aria-expanded", on); $(p).hidden = !on;
+    $(b).setAttribute("aria-expanded", on); $(p).hidden = !on; if(on && p==="pricePanel") loadPaket();
   });
 });
 
@@ -382,7 +482,7 @@ function show(id){
         r.querySelector("b").textContent=a.label;
         r.querySelector("small").textContent=rp(a.harga)+"/"+a.satuan;
         const [minus,plus]=r.querySelectorAll("button"), out=r.querySelector("output");
-        const upd=d=>{qty[a.key]=Math.max(0,Math.min(50,qty[a.key]+d)); out.textContent=qty[a.key]; minus.disabled=!qty[a.key]; refresh();};
+        const upd=d=>{qty[a.key]=Math.max(0,Math.min(50,qty[a.key]+d)); out.textContent=qty[a.key]; out.classList.remove("bump"); void out.offsetWidth; out.classList.add("bump"); minus.disabled=!qty[a.key]; refresh();};
         minus.addEventListener("click",()=>upd(-1)); plus.addEventListener("click",()=>upd(1)); minus.disabled=true;
         ad.append(r);
       });
@@ -393,7 +493,7 @@ function show(id){
     function refresh(){
       let total=p.harga||0; const lines=[];
       (c.addons||[]).forEach(a=>{ if(qty[a.key]){ total+=qty[a.key]*a.harga; lines.push(`${a.label} : ${qty[a.key]} ${a.satuan} (${rp(qty[a.key]*a.harga)})`); } });
-      if(totalEl) totalEl.innerHTML=`<span>Total</span><strong>${rp(total)}</strong>`;
+      if(totalEl) animTotal(totalEl,total);
       let msg=`Halo admin FF Studio,\nSaya mau pesan *${c.judul} ${p.nama}*\n\nNama : \nTanggal & jam : `;
       if(lines.length) msg+=`\n\n`+lines.join("\n");
       if(p.harga) msg+=`\n\n*Total : ${rp(total)}*`;
@@ -412,7 +512,7 @@ function show(id){
 }
 cats.forEach(c=>{
   const b=document.createElement("button"); b.className="tab"; b.setAttribute("role","tab"); b.dataset.cat=c.id; b.textContent=LABEL[c.id]||c.id;
-  b.addEventListener("click",()=>show(c.id)); $("tabs").append(b);
+  b.addEventListener("click",()=>loadPaket(c.id)); $("tabs").append(b);
 });
 show(cats[0].id);
 </script>
